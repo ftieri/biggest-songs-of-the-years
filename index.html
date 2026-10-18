@@ -36,29 +36,29 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      
       margin-bottom: 20px;
     }
 
     /* Make anchor behave like a block so the card stays clickable */
     .year-link {
       text-decoration: none;
+      flex: 0 1 auto;
     }
 
     .year-card_1, .year-card_2, .year-card_3, .year-card_4, .year-card_5 {
-  width: 280px;
-  height: 210px;
-  border-radius: 15px;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 65px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
+      width: clamp(120px, 15vw, 280px);
+      height: clamp(90px, 11vw, 210px);
+      border-radius: 15px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(28px, 3.5vw, 65px);
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
 
     .year-card_1 { background: red; }
     .year-card_2 { background: orange; }
@@ -73,6 +73,7 @@
     .year-card_5:hover {
       transform: translateY(-5px);
     }
+    
   </style>
 </head>
 <body>
